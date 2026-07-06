@@ -2,10 +2,15 @@
 <html>
 <head>
 <title>SAHALAT Fleet Finance</title>
-<meta http-equiv="refresh" content="0; url=https://pulling-depending-insertion-billion.trycloudflare.com/login.html">
-<script>window.location.replace("https://pulling-depending-insertion-billion.trycloudflare.com/login.html");</script>
+<script>
+fetch('https://raw.githubusercontent.com/sahalaat/Finance/main/url.json?_=' + Date.now())
+  .then(r => r.json())
+  .then(d => { window.location.replace(d.url + '/login.html'); })
+  .catch(() => { document.getElementById('msg').textContent = 'Server is offline. Please start the server on the PC.'; });
+</script>
 </head>
-<body>
-<p>Redirecting to SAHALAT Fleet Finance dashboard… <a href="https://pulling-depending-insertion-billion.trycloudflare.com/login.html">Click here if not redirected automatically.</a></p>
+<body style="font-family:Arial;text-align:center;padding:60px;color:#1f4e79;">
+<h2>SAHALAT Fleet Finance</h2>
+<p id="msg">Connecting to server...</p>
 </body>
 </html>
